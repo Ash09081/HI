@@ -1,0 +1,224 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+}
+
+/* Proposal */
+.proposal-screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+}
+
+.buttons{
+margin-top:30px;
+position:relative;
+width:320px;
+height:150px;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+position:absolute;
+transition:.25s ease;
+}
+
+#yesBtn{
+left:30px;
+top:50px;
+background:#ff4d6d;
+color:white;
+font-weight:bold;
+z-index:2;
+}
+
+#noBtn{
+right:30px;
+top:50px;
+background:#444;
+color:white;
+}
+
+/* MAIN SITE */
+.hidden{display:none;}
+
+nav{
+padding:20px;
+text-align:center;
+font-size:1.5rem;
+backdrop-filter:blur(10px);
+}
+
+.hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:20px;
+}
+
+/* Unlock Button */
+.unlock{
+position:relative;
+background:linear-gradient(135deg,#ff99cc,#cc66ff);
+font-size:20px;
+padding:16px 35px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
+/* Slideshow */
+.slideshow img{
+width:320px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+/* FLOWERS */
+.flower{
+position:fixed;
+bottom:-40px;
+width:20px;
+height:20px;
+background:radial-gradient(circle,#ff99cc,#cc66ff);
+border-radius:50%;
+animation:grow 4s linear forwards;
+}
+
+@keyframes grow{
+to{
+transform:translateY(-110vh) scale(2);
+opacity:0;
+}
+}
+
+/* LILIES */
+.lily{
+position:fixed;
+bottom:-50px;
+width:26px;
+height:26px;
+background:radial-gradient(circle,#ffd6f6,#d291ff);
+border-radius:50% 50% 50% 0;
+transform:rotate(45deg);
+animation:lily 5s linear forwards;
+}
+
+@keyframes lily{
+to{
+transform:translateY(-120vh) rotate(45deg) scale(1.6);
+opacity:0;
+}
+}
+
+/* Floating Photos */
+.memory{
+position:fixed;
+width:140px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+animation:pop 6s linear forwards;
+}
+
+@keyframes pop{
+0%{transform:scale(0);}
+20%{transform:scale(1);}
+100%{transform:translateY(-120vh);}
+}
+/* Prevent overlap by giving safe movement zone */
+.buttons{
+margin-top:30px;
+position:relative;
+width:420px;
+height:220px;
+overflow:hidden; /* prevents escape */
+}
+
+/* Fireworks canvas */
+#fireworks{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+}
+
+/* LOVE LETTER */
+.letter{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.letter-content{
+background:white;
+color:#444;
+padding:40px;
+border-radius:20px;
+width:320px;
+text-align:center;
+animation:letterOpen .6s ease;
+font-family:'Playfair Display',serif;
+}
+
+@keyframes letterOpen{
+from{transform:scale(.3) rotate(-10deg); opacity:0;}
+to{transform:scale(1); opacity:1;}
+}
+
+.letter button{
+margin-top:20px;
+background:#ff4d6d;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+#yesBtn{
+left:30px;
+top:50px;
+background:#ff4d6d;
+color:white;
+font-weight:bold;
+z-index:2;
+white-space:nowrap;   /* keeps text in one line */
+display:inline-flex;
+align-items:center;
+justify-content:center;
+transition:all .25s ease;
+}
